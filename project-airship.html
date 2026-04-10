@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victorian Airship | J.H-B</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .massive-gallery-image {
+            width: 100%;
+            height: auto;
+            border: 4px solid #000;
+            box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.3);
+            margin-bottom: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="math-canvas"></canvas>
+
+    <nav class="navbar"
+        style="border-bottom: 1px solid var(--border-color); background: rgba(12,12,12,0.9); z-index: 10;">
+        <div class="logo" style="color: var(--text-primary);">J.H-B</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="art.html" style="color: var(--accent);">Creative DNA</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="cm-hero"
+        style="min-height: 80vh; justify-content: center; align-items: flex-start; padding-left: 10vw;">
+        <div class="cm-massive-title" style="flex-direction: column; gap: 0; align-items: flex-start;">
+            <h1 style="font-size: clamp(3rem, 10vw, 8rem); line-height: 0.9; margin: 0; text-transform: uppercase;">
+                VICTORIAN</h1>
+            <h1
+                style="font-size: clamp(3rem, 10vw, 8rem); line-height: 0.9; margin: 0; text-transform: uppercase; color: transparent; -webkit-text-stroke: 3px var(--text-primary);">
+                AIRSHIP</h1>
+        </div>
+        <div style="margin-top: 4rem;">
+            <h2
+                style="font-family: 'Geist Mono', monospace; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); margin-bottom: 2rem;">
+                Virtual Reality Escape Room</h2>
+            <a href="art.html" class="btn secondary">&larr; Back to Gallery</a>
+        </div>
+    </header>
+
+    <section style="width: 100%; position: relative; z-index: 2;">
+
+        <div class="cm-color-block terracotta-block">
+            <div class="cm-block-container" style="max-width: 1200px;">
+                <p class="cm-block-text" style="margin-bottom: 3rem;">In 3rd year of university myself and 5 others took
+                    on the task of creating a virtual reality short game experience. Taking inspiration from Victorian
+                    Design as well as Steam Punk, we blocked out a storyline and interior design within a strict 10-week
+                    cycle.</p>
+
+                <h3
+                    style="font-family: 'Geist Mono', monospace; font-size: 1.25rem; text-transform: uppercase; margin-top: 4rem; margin-bottom: 1rem;">
+                    Material Optimization</h3>
+                <p class="cm-block-text" style="font-size: 1.4rem;">I mainly worked as a Material and Prop Artist. One
+                    example was my responsibility for all wood materials across the scene, all of which I created within
+                    Substance Designer. The non-destructive workflow allowed me to create a base wood that I could
+                    iterate easily and change when feedback came in.</p>
+
+                <h3
+                    style="font-family: 'Geist Mono', monospace; font-size: 1.25rem; text-transform: uppercase; margin-top: 4rem; margin-bottom: 1rem;">
+                    Making It Alive</h3>
+                <p class="cm-block-text" style="font-size: 1.4rem;">We worked really hard to convey the feeling that
+                    this airship belonged to someone and that it was truly lived in. Each book had a title, each prop
+                    had a story. Working for Virtual Reality brought a whole new set of technical challenges,
+                    specifically maintaining optimization while pushing complex lighting boundaries in an interactive
+                    environment.</p>
+            </div>
+        </div>
+
+        <div class="cm-color-block sage-block">
+            <div class="cm-block-container">
+                <h2 class="cm-massive-heading" style="margin-bottom: 5rem;">PROJECT RENDERS</h2>
+                <div style="display: flex; flex-direction: column;">
+                    <img src="assets/art/Airship%20Project/AirshipWholeRender_1.png" alt="Airship Render 1"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Airship%20Project/AirshipWholeRender_5.png" alt="Airship Render 2"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Airship%20Project/AirshipWholeRender_7.png" alt="Airship Render 3"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Airship%20Project/AirshipWholeRender_9.png" alt="Airship Render 4"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Airship%20Project/AirshipWholeRender_2.png" alt="Airship Render 5"
+                        class="massive-gallery-image" style="margin-bottom: 0;">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="geometry.js"></script>
+</body>
+
+</html>

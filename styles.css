@@ -1,0 +1,988 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600;700&display=swap');
+
+:root {
+    --bg-main: #FAFAFA;
+    --text-primary: #171717;
+    /* Near black */
+    --text-secondary: #737373;
+    /* Crisp gray */
+    --border-color: #E5E5E5;
+    /* Light boundary line */
+    --border-hover: #A3A3A3;
+    --accent: #000000;
+    --creative-terracotta: #BC6C47;
+    --creative-sage: #7D8471;
+}
+
+body {
+    margin: 0;
+    font-family: 'Satoshi', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Aeonik', 'Satoshi', sans-serif;
+    margin-top: 0;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    /* keep above canvas */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(250, 250, 250, 0.95);
+    border-bottom: 1px dotted var(--border-hover);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Geist Mono', monospace;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    padding: 0.25rem 0.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    margin-left: 2rem;
+    font-weight: 600;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Canvas Background */
+#math-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+/* Sharp Rectangular Structures */
+.glass {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 3rem;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+    /* Brutalist hard shadow */
+}
+
+.hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    /* Shift alignment to left for technical feel */
+    padding-top: 6rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+}
+
+.hero h2 {
+    font-family: 'Geist Mono', monospace;
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.hook {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    max-width: 600px;
+}
+
+.sub-hook {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.95rem;
+}
+
+/* Grids & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.section-title {
+    font-family: 'Geist Mono', monospace;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 4rem 0 2rem;
+    text-align: left;
+    letter-spacing: 1px;
+    border-bottom: 1px dotted var(--border-hover);
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 2.5rem;
+    background: #FFFFFF;
+    border: 1px dashed var(--border-hover);
+    box-shadow: none;
+}
+
+.card:hover {
+    transform: translate(-3px, -3px);
+    border-color: var(--creative-terracotta);
+    border-style: solid;
+    box-shadow: 4px 4px 0px var(--creative-sage);
+}
+
+.card h3 {
+    font-family: 'Geist Mono', monospace;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+/* Buttons and Labels */
+.btn {
+    display: inline-block;
+    background: #FFFFFF;
+    color: var(--accent);
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--accent);
+    border-radius: 0;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--text-primary);
+    color: #FFF;
+    box-shadow: 4px 4px 0px var(--creative-terracotta);
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
+}
+
+.date {
+    display: inline-block;
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+}
+
+ul {
+    padding-left: 1.2rem;
+    color: var(--text-primary);
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+strong {
+    color: var(--text-primary);
+}
+
+/* Base Restyle for the Masonry and Forms */
+.masonry {
+    column-count: 3;
+    column-gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.masonry-item {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.masonry-item:hover {
+    transform: translate(-3px, -3px);
+    border-color: var(--creative-terracotta);
+    box-shadow: 4px 4px 0px var(--creative-sage);
+}
+
+.masonry-item img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.form-group label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    border-left: 1px solid var(--border-color);
+    padding-left: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    background: #FFFFFF;
+    font-family: 'Satoshi', sans-serif;
+    color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--text-primary);
+    box-shadow: 2px 2px 0px var(--border-color);
+}
+
+/* Base Lightbox Engine Styles */
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(250, 250, 250, 0.95);
+    /* Baseten technical off-white overlay */
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: zoom-out;
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border: 1px solid var(--text-primary);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+}
+
+#lightbox-caption {
+    margin-top: 2rem;
+    font-family: 'Geist Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #FFFFFF;
+    border: 1px solid var(--text-primary);
+    padding: 0.5rem 1rem;
+}
+
+/* --- COLIN MOY DARK MODE OVERRIDE --- */
+:root {
+    --bg-main: #020402;
+    /* Extremely dark forest/space void */
+    --bg-color: #020402;
+    --text-primary: #F0F0F0;
+    --text-secondary: #999999;
+    --border-color: #2A2A2A;
+    --border-hover: #555555;
+    --accent: #FFFFFF;
+    --creative-terracotta: #E36435;
+    --creative-sage: #91A378;
+    --creative-ochre: #EAB262;
+}
+
+.glass {
+    background: rgba(15, 15, 15, 0.85);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+}
+
+.card {
+    background: #151515;
+}
+
+.card:hover {
+    border-color: var(--creative-terracotta);
+    box-shadow: 4px 4px 0px var(--creative-sage);
+}
+
+input,
+textarea {
+    background: #111;
+    color: #FFF;
+}
+
+.btn {
+    border: 1px solid #FFF;
+}
+
+.btn:hover {
+    background: #FFF;
+    color: #000;
+}
+
+.btn.secondary {
+    border-color: var(--border-hover);
+}
+
+#lightbox {
+    background: rgba(5, 5, 5, 0.98);
+}
+
+#lightbox-caption {
+    background: #000;
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
+/* --- CSS Geometric Animations --- */
+/* Geometric Cryptogram Title (Replaces JOSHUA.HB) */
+.geo-letter {
+    width: clamp(40px, 8vw, 110px);
+    height: clamp(40px, 8vw, 110px);
+    margin: 0 0.5vw;
+    position: relative;
+    display: inline-block;
+}
+
+.shape-j {
+    background: transparent;
+    border-right: clamp(10px, 2vw, 20px) solid var(--creative-sage);
+    border-bottom: clamp(10px, 2vw, 20px) solid var(--creative-sage);
+    border-left: clamp(10px, 2vw, 20px) solid var(--creative-sage);
+    border-radius: 0 0 50% 50%;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 65%, 50% 65%);
+    animation: rotate-rock 5s infinite ease-in-out;
+}
+
+@keyframes rotate-rock {
+
+    0%,
+    100% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+.shape-o {
+    border-radius: 50%;
+    border: 6px dashed var(--creative-sage);
+    animation: spin-slow 15s linear infinite;
+    box-shadow: 0 0 10px rgba(125, 132, 113, 0.3);
+}
+
+.shape-o::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    border: 4px solid var(--creative-terracotta);
+    transform: rotate(45deg);
+    animation: pulse-shape 4s ease-in-out infinite;
+}
+
+.shape-s {
+    background: var(--creative-terracotta);
+    clip-path: polygon(0% 0%, 100% 0%, 50% 50%, 100% 100%, 0% 100%, 50% 50%);
+    animation: float-up-down 4s infinite alternate;
+}
+
+@keyframes float-up-down {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.shape-h {
+    background: linear-gradient(90deg, var(--creative-ochre) 35%, transparent 35%, transparent 65%, var(--creative-ochre) 65%);
+    border-radius: 6px;
+    animation: spin-slow 20s reverse infinite;
+}
+
+.shape-u {
+    border: clamp(8px, 1.5vw, 16px) solid var(--text-primary);
+    border-top: none;
+    border-radius: 0 0 50% 50%;
+    animation: pulse-border 5s infinite alternate;
+}
+
+@keyframes pulse-border {
+    0% {
+        border-color: var(--text-primary);
+    }
+
+    100% {
+        border-color: var(--creative-terracotta);
+    }
+}
+
+.shape-a {
+    background: var(--creative-ochre);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: float-up-down 4.5s infinite alternate-reverse;
+}
+
+.shape-dot {
+    width: clamp(15px, 3vw, 30px);
+    height: clamp(15px, 3vw, 30px);
+    background: var(--creative-sage);
+    border-radius: 50%;
+    align-self: flex-end;
+    margin: 0 1vw 1rem 1vw;
+    animation: pulse-shape 3s infinite alternate;
+}
+
+.shape-hb-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: clamp(40px, 8vw, 110px);
+    height: clamp(40px, 8vw, 110px);
+    margin: 0 0.5vw;
+    gap: 4px;
+    animation: spin-slow 25s linear infinite;
+}
+
+.hb-tri {
+    background: var(--creative-sage);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hb-tri-down {
+    background: var(--creative-terracotta);
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.hb-circ {
+    background: var(--creative-ochre);
+    border-radius: 50%;
+}
+
+.hb-circ-2 {
+    background: var(--text-primary);
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Expanded Cryptogram Alphabet: B, T, M, E, C, R, I, V, D, N */
+.shape-b {
+    border: clamp(10px, 2vw, 20px) solid var(--creative-terracotta);
+    border-left: clamp(20px, 4vw, 40px) solid var(--creative-terracotta);
+    border-radius: 0 50% 50% 0;
+    animation: pulse-shape 4s infinite alternate-reverse;
+}
+
+.shape-t {
+    border-top: clamp(12px, 2.5vw, 24px) solid var(--creative-sage);
+    position: relative;
+    background: transparent;
+    animation: float-up-down 3s infinite ease-in-out;
+}
+
+.shape-t::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(12px, 2.5vw, 24px);
+    height: clamp(30px, 6vw, 86px);
+    background: var(--creative-sage);
+}
+
+.shape-m {
+    background: var(--creative-ochre);
+    clip-path: polygon(0% 100%, 0% 20%, 50% 70%, 100% 20%, 100% 100%, 75% 100%, 75% 50%, 50% 85%, 25% 50%, 25% 100%);
+    animation: float-up-down 5s infinite alternate;
+}
+
+.shape-e {
+    border-left: clamp(12px, 2vw, 24px) solid var(--creative-sage);
+    border-top: clamp(12px, 2vw, 24px) solid var(--creative-sage);
+    border-bottom: clamp(12px, 2vw, 24px) solid var(--creative-sage);
+    position: relative;
+    background: transparent;
+    animation: rotate-rock 6s infinite alternate;
+}
+
+.shape-e::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: clamp(12px, 2vw, 24px);
+    width: 60%;
+    background: var(--creative-sage);
+}
+
+.shape-c {
+    border: clamp(12px, 2vw, 24px) solid var(--creative-terracotta);
+    border-right: none;
+    border-radius: 50% 0 0 50%;
+    animation: spin-slow 20s reverse infinite;
+}
+
+.shape-r {
+    border: clamp(10px, 2vw, 20px) solid var(--creative-ochre);
+    border-left: clamp(20px, 4vw, 40px) solid var(--creative-ochre);
+    border-bottom: none;
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    animation: float-up-down 4s infinite alternate-reverse;
+}
+
+.shape-r::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 40%;
+    height: clamp(20px, 4vw, 50px);
+    border-right: clamp(10px, 2vw, 20px) solid var(--creative-ochre);
+    transform: skewX(-20deg);
+}
+
+.shape-i {
+    width: clamp(20px, 4vw, 60px);
+    background: var(--creative-terracotta);
+    border-radius: 100px;
+    animation: pulse-shape 3s infinite;
+}
+
+.shape-v {
+    background: var(--creative-sage);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    animation: float-up-down 4.5s infinite alternate;
+}
+
+.shape-d {
+    border: clamp(12px, 2vw, 24px) solid var(--creative-ochre);
+    border-left: clamp(24px, 4vw, 48px) solid var(--creative-ochre);
+    border-radius: 0 50% 50% 0;
+    animation: pulse-border 6s infinite alternate;
+}
+
+.shape-n {
+    background: var(--creative-terracotta);
+    clip-path: polygon(0 100%, 0 0, 30% 0, 100% 70%, 100% 0, 100% 100%, 70% 100%, 0 30%);
+    animation: rotate-rock 5s infinite;
+}
+
+@keyframes spin-slow {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-shape {
+
+    0%,
+    100% {
+        transform: rotate(45deg) scale(1);
+        border-radius: 0;
+    }
+
+    50% {
+        transform: rotate(180deg) scale(0.85);
+        border-radius: 50%;
+        border-color: var(--creative-ochre);
+    }
+}
+
+/* Colin Moy Aesthetic Classes */
+.cm-hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.cm-massive-title {
+    font-family: 'Aeonik', 'Satoshi', sans-serif;
+    font-size: clamp(3rem, 11.5vw, 13rem);
+    font-weight: 900;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    letter-spacing: -3px;
+    margin-bottom: 2rem;
+    cursor: default;
+}
+
+.cm-toggle-pill {
+    width: clamp(100px, 22vw, 300px);
+    height: clamp(60px, 14vw, 180px);
+    background: #FFF;
+    border-radius: 1000px;
+    position: relative;
+    cursor: grab;
+    transition: background 0.3s;
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.cm-toggle-circle {
+    width: clamp(50px, 12vw, 155px);
+    height: clamp(50px, 12vw, 155px);
+    background: var(--bg-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: left 0.5s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.cm-toggle-pill:hover .cm-toggle-circle {
+    left: calc(100% - clamp(50px, 12vw, 155px) - 10px);
+    background: var(--creative-terracotta);
+}
+
+.cm-marquee-container {
+    width: 90%;
+    max-width: 1400px;
+    margin-top: 5rem;
+    background: var(--creative-ochre);
+    border-radius: 1000px;
+    padding: 1.5rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border: 4px solid var(--text-primary);
+    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.8);
+    animation: sway 6s ease-in-out infinite alternate;
+}
+
+.cm-marquee-container:hover {
+    animation-play-state: paused;
+    box-shadow: 0px 0px 40px rgba(234, 178, 98, 0.5);
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(-3deg) scale(1.02);
+    }
+
+    100% {
+        transform: rotate(4deg) scale(1.02);
+    }
+}
+
+.cm-marquee-track {
+    display: inline-block;
+    animation: cm-marquee 25s linear infinite;
+}
+
+.cm-marquee-text {
+    font-family: 'Geist Mono', monospace;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-right: 3rem;
+}
+
+@keyframes cm-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.cm-color-block {
+    width: 100%;
+    padding: 10rem 2rem;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+}
+
+.cm-block-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.terracotta-block {
+    background: var(--creative-terracotta);
+    color: #000;
+}
+
+.sage-block {
+    background: var(--creative-sage);
+    color: #000;
+    box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.ochre-block {
+    background: var(--creative-ochre);
+    color: #000;
+}
+
+.cm-massive-heading {
+    font-family: 'Aeonik', 'Satoshi', sans-serif;
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+    line-height: 0.9;
+}
+
+.cm-block-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.cm-capsule-img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 1000px;
+    border: 6px solid #000;
+    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cm-capsule-img:hover {
+    transform: scale(1.03) rotate(2deg);
+}
+
+.btn.cm-pill-btn {
+    border-radius: 1000px;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Geist Mono', monospace;
+    letter-spacing: 1px;
+}
+
+.btn.cm-pill-btn.dark {
+    background: #000;
+    color: #FFF;
+    border: none;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn.cm-pill-btn.dark:hover {
+    background: #FFF;
+    color: #000;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    transform: translate(6px, 6px);
+}
+
+/* Massive Color Block Accordions (Global Aesthetic) */
+details.cm-massive-accordion {
+    width: 100%;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    margin-bottom: -4px;
+    /* overlap borders cleanly */
+    transition: all 0.4s ease;
+}
+
+details.cm-massive-accordion summary {
+    padding: 4rem 6vw;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details.cm-massive-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+details.cm-massive-accordion summary .cm-massive-heading {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #000;
+    width: 80%;
+}
+
+.accordion-focus {
+    display: block;
+    font-family: 'Geist Mono', monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 1rem;
+}
+
+details.cm-massive-accordion summary::after {
+    content: '+';
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    font-family: 'Aeonik', 'Satoshi', sans-serif;
+    color: #000;
+    transition: transform 0.3s ease;
+    align-self: flex-start;
+}
+
+details.cm-massive-accordion[open] summary::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+details.cm-massive-accordion .content {
+    padding: 0 6vw 4rem 6vw;
+}
+
+.cm-massive-accordion.terracotta {
+    background: var(--creative-terracotta);
+    color: #000;
+}
+
+.cm-massive-accordion.sage {
+    background: var(--creative-sage);
+    color: #000;
+    box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.cm-massive-accordion.ochre {
+    background: var(--creative-ochre);
+    color: #000;
+}
+
+.cm-massive-accordion .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 1200px;
+}
+
+.cm-massive-accordion .content li {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    border-left: 4px solid #000;
+    padding-left: 2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.cm-massive-accordion .content li:last-child {
+    margin-bottom: 0;
+}
+
+.cm-massive-accordion .content li strong {
+    display: block;
+    font-family: 'Geist Mono', monospace;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.cm-massive-accordion .content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    color: #000;
+    max-width: 1400px;
+}
+
+.cm-massive-accordion .content p:last-child {
+    margin-bottom: 0;
+}
+
+.cm-massive-accordion img.gallery-image {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    border: 4px solid #000;
+    margin-bottom: 2rem;
+    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.3);
+}

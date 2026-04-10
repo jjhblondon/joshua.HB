@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Houghton-Brown | Technical Project Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="math-canvas"></canvas>
+
+    <nav class="navbar"
+        style="border-bottom: 1px solid var(--border-color); background: rgba(12,12,12,0.9); z-index: 10;">
+        <div class="logo" style="color: var(--text-primary);">J.H-B</div>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--accent);">Home</a>
+            <a href="about.html">About</a>
+            <a href="art.html">Creative DNA</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="cm-hero">
+        <div class="cm-massive-title">
+            <div class="geo-letter shape-j"></div>
+            <div class="geo-letter shape-o"></div>
+            <div class="geo-letter shape-s"></div>
+            <div class="geo-letter shape-h"></div>
+            <div class="geo-letter shape-u"></div>
+            <div class="geo-letter shape-a"></div>
+            <div class="shape-dot"></div>
+            <div class="shape-hb-grid">
+                <div class="hb-tri"></div>
+                <div class="hb-circ"></div>
+                <div class="hb-circ-2"></div>
+                <div class="hb-tri-down"></div>
+            </div>
+        </div>
+
+        <div class="cm-marquee-container">
+            <div class="cm-marquee-track">
+                <span class="cm-marquee-text">TECHNICAL PROJECT MANAGER • PEOPLE FIRST APPROACH • THE ENGINEERING BRIDGE
+                    •
+                </span>
+                <span class="cm-marquee-text">TECHNICAL PROJECT MANAGER • PEOPLE FIRST APPROACH • THE ENGINEERING BRIDGE
+                    •
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <section id="portfolio" style="width: 100%; position: relative; z-index: 2;">
+
+        <!-- Block 1: Tech & People -->
+        <div class="cm-color-block terracotta-block">
+            <div class="cm-block-container" style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="cm-massive-heading">1. TECH AND PEOPLE</h2>
+                    <p class="cm-block-text">Bridging the gap between engineering complexities and human creativity.
+                        Delivering sophisticated systems without losing the plot.</p>
+                    <a href="about.html" class="btn cm-pill-btn dark">My Background</a>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="assets/art/Home%20images/PXL_20250114_062008955.MP.jpg.jpeg" alt="Tech and People"
+                        class="cm-capsule-img" style="border-color: #000;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 2: Creative DNA -->
+        <div class="cm-color-block sage-block">
+            <div class="cm-block-container"
+                style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap-reverse;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="assets/art/Home%20images/IMG_1035.jpg_1.webp" alt="Creative DNA" class="cm-capsule-img"
+                        style="border-color: #000;">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="cm-massive-heading">2. CREATIVE DNA</h2>
+                    <p class="cm-block-text">A foundation born from high-pressure VFX production pipelines. I speak the
+                        artists' language and understand the creative process.</p>
+                    <a href="art.html" class="btn cm-pill-btn dark">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 3: Contact Me -->
+        <div class="cm-color-block ochre-block">
+            <div class="cm-block-container" style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="cm-massive-heading">3. CONTACT ME</h2>
+                    <p class="cm-block-text">Let's build something completely unique. Open channels for creative
+                        direction and rigorous 0→1 technical delivery.</p>
+                    <a href="contact.html" class="btn cm-pill-btn dark">Send Transmission</a>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="assets/art/Art/cherry+blosso.webp" alt="Contact Art" class="cm-capsule-img"
+                        style="border-color: #000;">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Global Layout Fix for Footer -->
+    <section class="container" style="margin: 4rem auto; position: relative; z-index: 2;">
+        <div class="glass" style="border-left: 4px solid var(--creative-ochre); padding: 2.5rem;">
+            <p
+                style="font-size: 1.35rem; font-weight: 300; font-family: 'Satoshi', sans-serif; font-style: italic; margin: 0; color: var(--text-primary); line-height: 1.8;">
+                Driven by the power of teamwork and creative problem-solving, I aim to help produce innovative products
+                that shape the future of storytelling, education, and other industries.
+            </p>
+        </div>
+    </section>
+
+    <script src="geometry.js"></script>
+</body>
+
+</html>

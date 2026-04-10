@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armorsaurs | J.H-B</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .massive-gallery-image {
+            width: 100%;
+            height: auto;
+            border: 4px solid #000;
+            box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.3);
+            margin-bottom: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="math-canvas"></canvas>
+
+    <nav class="navbar"
+        style="border-bottom: 1px solid var(--border-color); background: rgba(12,12,12,0.9); z-index: 10;">
+        <div class="logo" style="color: var(--text-primary);">J.H-B</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="art.html" style="color: var(--accent);">Creative DNA</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="cm-hero"
+        style="min-height: 80vh; justify-content: center; align-items: flex-start; padding-left: 10vw;">
+        <div class="cm-massive-title" style="flex-direction: column; gap: 0; align-items: flex-start;">
+            <h1 style="font-size: clamp(3rem, 10vw, 8rem); line-height: 0.9; margin: 0; text-transform: uppercase;">
+                ARMORSAURS</h1>
+        </div>
+        <div style="margin-top: 4rem;">
+            <h2
+                style="font-family: 'Geist Mono', monospace; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); margin-bottom: 2rem;">
+                Live Action VFX Assets & Environments - NOW STREAMING ON DISNEY+</h2>
+            <a href="art.html" class="btn secondary">&larr; Back to Gallery</a>
+        </div>
+    </header>
+
+    <section style="width: 100%; position: relative; z-index: 2;">
+
+        <div class="cm-color-block ochre-block">
+            <div class="cm-block-container" style="max-width: 1200px;">
+                <p class="cm-block-text" style="margin-bottom: 2rem;">From my time at Pixel Zoo, this project was by far
+                    the most enjoyable for me. It pushed both my technical and creative skills to new levels. The
+                    challenge of creating high-quality assets for live action VFX - from detailed materials to optimized
+                    environments - was incredibly rewarding. Collaborating with a talented team to bring imaginative
+                    concepts to life inspired me every day.</p>
+                <p class="cm-block-text"
+                    style="font-size: 1.3rem; margin-bottom: 4rem; border-left: 4px solid #000; padding-left: 2rem;">
+                    Most of my time was spent fixing and creating shaders, but I had the privilege of working on some
+                    wonderful sets. <em>(This project is still in production - These renders are my own and are not
+                        finals).</em></p>
+
+                <h3
+                    style="font-family: 'Geist Mono', monospace; font-size: 1.25rem; text-transform: uppercase; margin-top: 4rem; margin-bottom: 1rem;">
+                    The Beach Set</h3>
+                <p class="cm-block-text" style="font-size: 1.4rem;">Using a landscape material I had made, along with
+                    Virtual Texture streaming and custom Megascans Master Materials, I built this set in about a week. A
+                    large part of this set was the water; I used Fluid Flux, a wonderful Unreal Engine fluid simulation
+                    tool, ensuring nothing in the scene would have problems during rendering.</p>
+
+                <h3
+                    style="font-family: 'Geist Mono', monospace; font-size: 1.25rem; text-transform: uppercase; margin-top: 4rem; margin-bottom: 1rem;">
+                    The Holodeck</h3>
+                <p class="cm-block-text" style="font-size: 1.4rem;">Scripted to be a room in which a training simulation
+                    takes place. There were two main concepts I wanted to push: that this room was very large, and very
+                    high-tech. Coming from Video Games, I built this set modularly, making it lighter on render times.
+                    Striking a balance between storytelling and realism within Unreal Engine's Substrate Materials was a
+                    true priority.</p>
+
+                <h3
+                    style="font-family: 'Geist Mono', monospace; font-size: 1.25rem; text-transform: uppercase; margin-top: 4rem; margin-bottom: 1rem;">
+                    The Jungle</h3>
+                <p class="cm-block-text" style="font-size: 1.4rem;">A technical challenge. The first task was getting
+                    all foliage onto the same optimized Master Material using Substrate and Lumin. We originally created
+                    a landscape, but later swapped it out for a mesh with vertex painting combined with Defer Decals to
+                    give lighting full control over diffuse transparency areas.</p>
+            </div>
+        </div>
+
+        <div class="cm-color-block terracotta-block">
+            <div class="cm-block-container">
+                <h2 class="cm-massive-heading" style="margin-bottom: 5rem;">PROJECT RENDERS</h2>
+                <div style="display: flex; flex-direction: column;">
+                    <img src="assets/art/Armorsaurs/thumbnail.webp" alt="Thumbnail" class="massive-gallery-image">
+                    <img src="assets/art/Armorsaurs/Beach01.png.webp" alt="Beach Render 1"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Armorsaurs/Jungle01.png.webp" alt="Jungle Render 1"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Armorsaurs/holodeck02.png.webp" alt="Holodeck Render 1"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Armorsaurs/Beach02.png.webp" alt="Beach Render 2"
+                        class="massive-gallery-image">
+                    <img src="assets/art/Armorsaurs/holodeck03.png.webp" alt="Holodeck Render 2"
+                        class="massive-gallery-image" style="margin-bottom: 0;">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="geometry.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Toolkit | J.H-B</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="math-canvas"></canvas>
+
+    <nav class="navbar"
+        style="border-bottom: 1px solid var(--border-color); background: rgba(12,12,12,0.9); z-index: 10;">
+        <div class="logo" style="color: var(--text-primary);">J.H-B</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" style="color: var(--accent);">About</a>
+            <a href="art.html">Creative DNA</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 35vh;">
+        <div class="container glass" style="background: transparent; border: none; box-shadow: none; padding-left: 0;">
+            <h1>The Toolkit</h1>
+            <h2 style="margin-top: 1rem;">Management, Tech & People Skills</h2>
+            <a href="about.html" class="btn secondary" style="margin-bottom: 2rem; margin-top: 1rem;">&larr; Back to About</a>
+        </div>
+    </header>
+
+    <section style="width: 100%; position: relative; z-index: 2; margin-bottom: 4rem;">
+        
+        <details class="cm-massive-accordion terracotta" open>
+            <summary>
+                <div>
+                    <h2 class="cm-massive-heading">1. Technical Delivery & Leadership</h2>
+                    <span class="accordion-focus">Focus: How I lead teams and move projects across the finish line.</span>
+                </div>
+            </summary>
+            <div class="content">
+                <ul>
+                    <li>
+                        <strong>Calm Under Pressure:</strong>
+                        The go-to lead for technical incidents and live issues. I act as the steady hand during high-pressure situations, focusing on clear communication and logical problem-solving to resolve immediate issues while preventing future ones.
+                    </li>
+                    <li>
+                        <strong>Turning Ambiguity into Action:</strong>
+                        I specialize in taking "big picture" client ideas and translating them into structured technical roadmaps and specifications that engineering teams can actually build.
+                    </li>
+                    <li>
+                        <strong>Jira as a Collaboration Hub:</strong>
+                        I design and govern Jira spaces that do more than track tasks—they provide clarity. By balancing platform maintenance with new feature development, I ensure the team has a "single source of truth" that encourages collaboration over admin overhead.
+                    </li>
+                    <li>
+                        <strong>Strategic Risk Management:</strong>
+                        Proactive management of RAID logs and roadmaps to surface dependencies early, keeping delivery dates realistic even when requirements shift.
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="cm-massive-accordion sage">
+            <summary>
+                <div>
+                    <h2 class="cm-massive-heading">2. Data & AI Infrastructure</h2>
+                    <span class="accordion-focus">Focus: The technical systems I navigate and the "AI-first" mindset I bring.</span>
+                </div>
+            </summary>
+            <div class="content">
+                <ul>
+                    <li>
+                        <strong>The AI-Native Mindset:</strong>
+                        Acting as an "Owner of AI," I establish prompting frameworks and investigate local LLMs (like NotebookLM) to synthesize technical documentation and improve team delivery speeds.
+                    </li>
+                    <li>
+                        <strong>Data Lifecycle Management:</strong>
+                        Deep understanding of the logic behind real-time and batch data ingestion. Experienced in managing Single Customer View (SCV) environments that consolidate complex customer touchpoints.
+                    </li>
+                    <li>
+                        <strong>Technical Validation (SQL):</strong>
+                        Hands-on capability for data investigation and analysis, ensuring that delivery outcomes align with technical requirements.
+                    </li>
+                    <li>
+                        <strong>Workflow Automation:</strong>
+                        Utilizing Python to optimize internal workflows, reducing manual production times and increasing overall team efficiency.
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="cm-massive-accordion ochre">
+            <summary>
+                <div>
+                    <h2 class="cm-massive-heading">3. Creative Technology & 3D Art</h2>
+                    <span class="accordion-focus">Focus: My foundation in real-time engines and high-end asset production.</span>
+                </div>
+            </summary>
+            <div class="content">
+                <ul>
+                    <li>
+                        <strong>Real-Time Engines (Unreal Engine):</strong>
+                        Technical Art expertise including Substrate shaders, Blueprints, and look-development (Lookdev) with a focus on scene optimization and PCG.
+                    </li>
+                    <li>
+                        <strong>3D Asset Pipeline:</strong>
+                        High-level hard surface modeling (Maya), retopology, and UV mapping. Proficient in PBR workflows and procedural material creation (Substance Suite) for optimized pipelines.
+                    </li>
+                    <li>
+                        <strong>Version Control & Production Tooling:</strong>
+                        Industry-standard experience with Perforce, Git, and SVN for collaborative versioning, alongside production management in Ftrack.
+                    </li>
+                    <li>
+                        <strong>Cinematic Rendering:</strong>
+                        Specialized in lighting setups and rendering (Redshift/Unreal) for high-pressure animation and VFX pipelines.
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+    </section>
+
+    <script src="geometry.js"></script>
+</body>
+
+</html>
