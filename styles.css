@@ -1001,3 +1001,144 @@ details.cm-massive-accordion .content {
     margin-bottom: 2rem;
     box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.3);
 }
+
+/* =========================================================================
+   MOBILE RESPONSIVENESS & HAMBURGER MENU 
+   ========================================================================= */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 200;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+@media (max-width: 768px) {
+    /* Navbar styling */
+    .navbar {
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hamburger Animation to X */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(12,12,12,0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        margin: 1rem 0;
+        font-size: 1.25rem;
+    }
+
+    /* Layout constraints */
+    .container {
+        padding: 1rem;
+    }
+    
+    .glass {
+        padding: 1.5rem;
+    }
+    
+    .cm-color-block {
+        padding: 4rem 1.5rem;
+    }
+    
+    .cm-block-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    
+    /* Massive Layout Images/Containers */
+    .cm-hero {
+        padding-top: 3rem;
+        min-height: auto;
+    }
+    
+    .cm-capsule-img {
+        max-width: 100%;
+        height: auto !important;
+        aspect-ratio: 4/5;
+        border-radius: 50px;
+    }
+
+    /* Typography Scale-down */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cm-massive-heading {
+        font-size: 2.5rem;
+        word-break: break-word;
+    }
+    
+    .cm-massive-title {
+        font-size: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .geo-letter {
+        width: 8vw;
+        height: 8vw;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .cm-block-text {
+        font-size: 1.1rem;
+    }
+    
+    /* Lists and grids */
+    .masonry {
+        column-count: 1;
+    }
+}

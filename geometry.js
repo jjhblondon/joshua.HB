@@ -112,3 +112,16 @@ if (canvas) {
     style.innerHTML = '.masonry-item img { cursor: zoom-in; } .masonry-item a img { cursor: pointer; }';
     document.head.appendChild(style);
 })();
+
+// Mobile Hamburger Navigation Logic
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    }
+});
