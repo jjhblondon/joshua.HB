@@ -370,21 +370,26 @@ strong {
     box-shadow: 4px 4px 0px var(--creative-sage);
 }
 
+#contact-form input,
+#contact-form textarea,
 .form-group input,
-.form-group textarea,
-input,
-textarea {
-    background: #111;
-    color: #FFF;
+.form-group textarea {
+    background: #111 !important;
+    color: #FFF !important;
 }
 
 .btn {
-    border: 1px solid #FFF;
+    background: var(--creative-terracotta);
+    color: #000;
+    font-weight: 700;
+    border: 1px solid var(--creative-terracotta);
 }
 
 .btn:hover {
-    background: #FFF;
+    background: var(--creative-ochre);
     color: #000;
+    border: 1px solid var(--creative-ochre);
+    box-shadow: 4px 4px 0px var(--creative-sage);
 }
 
 .btn.secondary {
