@@ -370,6 +370,8 @@ strong {
     box-shadow: 4px 4px 0px var(--creative-sage);
 }
 
+.form-group input,
+.form-group textarea,
 input,
 textarea {
     background: #111;
